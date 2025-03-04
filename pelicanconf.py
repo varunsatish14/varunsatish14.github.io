@@ -1,6 +1,6 @@
 AUTHOR = 'Varun Satish'
 SITENAME = 'Varun Satish'
-SITEURL = "https://varunsatish14.github.io/"
+SITEURL = "https://varunsatish14.github.io/output/"
 
 PATH = "content"
 OUTPUT_PATH = 'output/' 
