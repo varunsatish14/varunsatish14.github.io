@@ -38,7 +38,7 @@ THEME = 'blue-penguin'
 PAGE_PATHS = ['pages']  # Ensure pages are recognized
 INDEX_SAVE_AS = 'index.html'
 
-MENUITEMS = [('About', '/pages/about.html')]
+MENUITEMS = [('About', '/pages/about.html'), ('CV', 'assets/Satish_Varun_Resume.pdf')]
 DISPLAY_PAGES_ON_MENU = False  # Prevents Pelican from auto-adding pages
 
 
