@@ -1,9 +1,9 @@
 AUTHOR = 'Varun Satish'
 SITENAME = 'Varun Satish'
-SITEURL = "https://varunsatish14.github.io/output/"
+SITEURL = 'https://varunsatish14.github.io'
 
 PATH = "content"
-OUTPUT_PATH = 'output/' 
+OUTPUT_PATH = './' 
 
 TIMEZONE = 'America/Chicago'
 
