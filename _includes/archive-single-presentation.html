@@ -1,0 +1,69 @@
+
+<div class="presentation-entry">
+
+  <div class="presentation-entry__date">
+    {{ post.date | date: "%b %Y" }}
+  </div>
+
+  <div class="presentation-entry__content">
+
+    {% if post.type %}
+      <span class="presentation-entry__type">{{ post.type }}</span>
+    {% endif %}
+
+    <h3 class="presentation-entry__title">
+      {{ post.title }}
+    </h3>
+
+    {% if post.venue %}
+      <p class="presentation-entry__venue">
+        {{ post.venue }}
+      </p>
+    {% endif %}
+
+    {% if post.location %}
+      <p class="presentation-entry__location">
+        {{ post.location }}
+      </p>
+    {% endif %}
+
+    {% if post.excerpt %}
+      <div class="presentation-entry__description">
+        {{ post.excerpt | markdownify }}
+      </div>
+    {% endif %}
+
+    <div class="presentation-entry__links">
+
+      {% if post.slidesurl %}
+        <a href="{{ post.slidesurl }}" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-powerpoint"></i> Slides
+        </a>
+      {% endif %}
+
+      {% if post.posterurl %}
+        <a href="{{ post.posterurl }}" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-image"></i> Poster
+        </a>
+      {% endif %}
+
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-pdf"></i> Paper
+        </a>
+      {% endif %}
+
+      {% if post.link %}
+        <a href="{{ post.link }}" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-external-link-alt"></i> Link
+        </a>
+      {% endif %}
+      {% if post.abstractlink %}
+        <a href="{{ post.abstractlink }}" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-external-link-alt"></i> Abstract
+        </a>
+      {% endif %}
+
+    </div>
+  </div>
+</div>

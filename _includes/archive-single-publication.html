@@ -1,0 +1,106 @@
+
+{% include base_path %}
+
+<div class="publication-entry">
+  <article itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+    <!-- Publication title -->
+    <h3 class="publication-title" itemprop="headline">
+      {% if post.link %}
+        <a href="{{ post.link }}" target="_blank" rel="noopener noreferrer">
+          {{ post.title | escape }}
+        </a>
+      {% else %}
+        {{ post.title | escape }}
+      {% endif %}
+      <a href="{{ base_path }}{{ post.url }}"
+         rel="permalink"
+         class="publication-permalink"
+         title="Permanent link">
+        <i class="fas fa-link" aria-hidden="true"></i>
+      </a>
+    </h3>
+
+    <!-- Authors, if provided -->
+    {% if post.authors %}
+      <p class="publication-authors">
+        {{ post.authors }}
+      </p>
+    {% endif %}
+
+    <!-- Journal and year -->
+    {% if post.venue or post.date %}
+      <p class="publication-venue">
+        {% if post.venue %}{{ post.venue }}{% endif %}
+        {% if post.venue and post.date %}, {% endif %}
+        {% if post.date %}{{ post.date | date: "%Y" }}{% endif %}
+      </p>
+    {% endif %}
+
+    <!-- Full citation -->
+    {% if post.citation %}
+      <p class="publication-citation">
+        <span class="citation-label">Citation:</span>
+        {{ post.citation }}
+      </p>
+    {% endif %}
+
+    <!-- Publication links -->
+    <div class="publication-links">
+
+      {% if post.link %}
+        <a href="{{ post.link }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="DOI / External link"
+           aria-label="DOI or external publication link">
+          <i class="fas fa-fw fa-link zoom" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+      {% if post.scix %}
+        <a href="{{ post.scix }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="View on SciX"
+           aria-label="View on SciX">
+          <img src="{{ '/images/scix-logo.svg' | relative_url }}"
+               alt=""
+               class="scix-icon">
+        </a>
+      {% endif %}
+
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="Download PDF"
+           aria-label="Download PDF">
+          <i class="fas fa-fw fa-file-pdf zoom" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+      {% if post.code %}
+        <a href="{{ post.code }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="View code"
+           aria-label="View code">
+          <i class="fas fa-fw fa-code zoom" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+      {% if post.github %}
+        <a href="{{ post.github }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="View GitHub repository"
+           aria-label="View GitHub repository">
+          <i class="fab fa-fw fa-github zoom" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+    </div>
+
+  </article>
+</div>

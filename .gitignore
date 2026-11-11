@@ -1,0 +1,11 @@
+.DS_Store
+*/.DS_Store
+
+scripts
+markdown_generator
+portfolio
+posts
+_portfolio
+_posts
+_talks
+talks

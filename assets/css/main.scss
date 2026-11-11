@@ -1,0 +1,138 @@
+---
+---
+
+/*
+ * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ */
+
+@import
+    "vendor/breakpoint/breakpoint",
+
+    "themes",
+    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+
+    "include/mixins",
+    "vendor/susy/susy",
+
+    "layout/reset",
+    "layout/base",
+
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
+
+    "layout/forms",
+
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar"
+;
+.publication-entry {
+  padding: 0 0 22px 0;
+  margin: 0 0 22px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+.publication-title {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 7px 0;
+  color: #333333;
+
+  a {
+    color: #333333 !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #777777 !important;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.publication-title .publication-permalink {
+  font-size: 0.75em;
+  color: #999999 !important;
+  margin-left: 4px;
+
+  &:hover {
+    color: #333333 !important;
+  }
+}
+
+.publication-authors {
+  font-size: 0.88em;
+  color: #555555;
+  margin: 0 0 5px 0;
+  line-height: 1.6;
+}
+
+.publication-venue {
+  font-size: 0.88em;
+  color: #777777;
+  margin: 0 0 9px 0;
+  line-height: 1.5;
+}
+
+
+.publication-citation {
+  font-size: 0.82em;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0 0 10px 0;
+  overflow-wrap: anywhere;
+}
+
+.citation-label {
+  font-weight: 600;
+  color: #444444;
+}
+
+
+.publication-links {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 8px;
+
+  a {
+    color: #666666 !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      color: #222222 !important;
+    }
+  }
+
+  i {
+    font-size: 15px;
+  }
+}
+
+
+.publication-links .scix-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
