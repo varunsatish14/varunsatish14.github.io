@@ -18,7 +18,10 @@ main:
     url: /presentations/
   
   - title: "Outreach"
-    url: /outreach/      
+    url: /outreach/ 
+
+  - title: "Thai Tea Map"
+    url: /thai-tea/      
 
   #- title: "Teaching"
   #  url: /teaching/    
